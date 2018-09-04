@@ -1,0 +1,29 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"C:\\LogicielsPortable\\Panda3D-1.9.1-x64\\python\\ppython",
+				"-u",
+				"$project_path\\src\\main.py"
+			],
+			"name": "TankemCegep"
+		},
+		{
+			"cmd":
+			[
+				"python",
+				"-u",
+				"$project_path\\src\\main.py"
+			],
+			"name": "Tankem"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	]
+}

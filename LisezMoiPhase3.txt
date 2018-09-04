@@ -1,0 +1,19 @@
+---Présentations des 3 livrables---
+
+1- Base de données
+
+2- Modifications dans Tankem
+Par rapport à la phase 2, voici les éléments qui ont été ajouté en plus dans la phase 3.
+Suite à l'ouverture du programme, le joueur choisit une map de la BD ou une map aléatoire. 
+Par la suite, une page de connexion de joueurs est ajoutés. Dans cette page, les deux joueurs doivent se
+connecter, et suite à la connexion de chacun, l'image de leur tank (avec le bonne couleur) apparaît et
+est animé. Lorsque les deux joueurs sont connectés, un bouton "Combattre" apparaît et est animé
+comme un battement de coeur. Quand on clique sur le bouton "Combattre", les deux s'arrêter pour 
+se faire face à face et un message qui annonce le combat apparaît. 
+
+En gros, Tankem a été modifié pour pouvoir accueillir les modifications qui ont été faites dans la BD, c'est-à-dire
+les informations sur le joueur, les aspects reliés à la connexion du joueur, etc. De plus, les statistiques des 
+parties seront enregistrées à la fin d'une partie, car Tankem va les envoyer dans la BD. 
+
+3- Logiciels de gestion des joueurs.
+
