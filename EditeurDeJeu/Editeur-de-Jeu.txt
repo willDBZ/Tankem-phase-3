@@ -1,0 +1,27 @@
+********************************************
+*	INSTRUCTIONS POUR L'ÉDITEUR        *
+********************************************
+
+
+
+
+1. Il faut aller dans le fichier tankem 2 et aller vers le fichier Éditeur.
+
+2. Prendre ce fichier et son emplacement et quand Java est ouvert, aller dans file et choisir open file from Project System.
+
+3. Ceci va faire apparaitre les fichier, aller dans le fichier Editeur.java et peser le bouton play en vert.
+
+4. Le Map va apparaitre.
+
+5. Pour placer les joueurs, il faut choisir joueur 1 ou joueur 2 et peser placer pour être en mesure de repositionner 
+   la place du joueur 1. Ce qui est pareille pour le joueur 2.
+
+6. Vous ne pouver que placer l'arbre une fois que vous avez peser le bouton arbre.
+
+7. Les autre boutons se font facilement sans repeser le bouton une deuxième fois.
+
+8.  Pour effacer l'arbre, vous devez peser effacer et ensuite cliquer sur la place où l'arbre se trouve.
+
+9. Effacer tout va placer des placher partout. 
+
+10. Pour enregistrer, oublier pas de mettre un titre au map.

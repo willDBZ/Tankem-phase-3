@@ -1,0 +1,31 @@
+Formnes normales de la bd
+
+1FN les champs sont atomiques c'es-à-dire qu'il n'y a qu'une valeurs qui peut être entré dans le champs
+
+Respectée dans notre BD
+Exemple: dans la table Joueur, le champs Nom
+	dans la table Partie le champ Date_debut
+
+
+2FN
+ La deuxième forme normale stipule que tout attribut du deuxième groupe ne peut pas dépendre d'un sous-ensemble  du premier groupe. En d'autres termes : 
+ Un attribut non clé ne dépend pas d'une partie de la clé mais de toute la clé. 
+De plus, elle respecte la 1ère forme normale.
+les attributs non clé dépendent entièrement de la clé primaire. évite les redondance d'informations
+
+Respectée
+Exemple: dans la table Joueur avec l'id du joueur nous pouvons obtenir l'ensemble des informations de celui-ci
+	en somme, les attributs non-clé dépendent entièrement de la clé(id).
+	dans l table Armes_Stat nous pouvons avoir toutes les statistique des armes avec l'id.
+
+
+3FN
+  La troisième forme normale stipule que tout attribut du deuxième groupe ne peut pas dépendre que d'un sous-ensemble  du second groupe. 
+En d'autres termes : Un attribut non clé ne dépend pas d'un ou plusieurs attributs ne participant pas à la clé ». 
+Dit encore autrement :  Tous les attributs non clé doivent dépendre directement de la clé, 
+au sens où il n'y a aucun attribut non clé dépendant de la clé par dépendances transitives par l'intermédiaire d'autres attributs non clé .
+
+à revoir car l'experience dans la bd depend des cool points(ou inversement) donc possiblement une dependance entre eux??
+
+coup total correspond a quoi?
+coup total depend partiellement des coups_tiré_atteint_cible

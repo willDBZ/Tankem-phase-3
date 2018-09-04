@@ -1,0 +1,95 @@
+Programme: Tankem modifié
+Auteur: William Tang
+
+lazy --- créer l'objet lorsque le programme est ouvert.
+	 avantage: améliorer la performance.
+
+eager --- créer l'objet lorsque l'usager en a besoin.
+	 avantage: éviter de créer un objet inutilement.
+
+En prenant en considérations les éléments suivants, nous avons choisi les modes lazy pour la connexion
+Oracle et le mode eager pour le chargement des données:
+
+-------------------------------------------
+1- menu choix de maps: 
+-------------------------------------------
+-requête pour loader les maps (nom et id des maps seulement)
+-quand la map est choisie: requête pour loader les infos sur la map
+
+-------------------------------------------
+2- menu connexion:
+-------------------------------------------
+-lors de la connexion d'un des joueurs: requête pour vérifier les valeurs du joueur
+-requête pour loader le joueur (couleur tank, etc.)
+
+-------------------------------------------
+3- jeu: 
+-------------------------------------------
+-avant le jeu: les joueurs doivent être créés.
+-avant le jeu: la map doit être loadée.
+-aucune requête de sélection pendant le jeu
+
+-------------------------------------------
+4- fin de partie:
+-------------------------------------------
+-aucune requête de sélection
+
+
+
+-------------------------------------------
+Mode lazy pour la connexion DAO_Oracle:
+-------------------------------------------
+Pour créer la connexion DAO_Oracle, nous faisons cela dès l'ouverture du programme.
+C'est plus intéressant de cette façon, car nous avons besoin de la connexion dès l'ouverture
+du programme (pour loader les maps). 
+Dans le cas où la connexion Oracle est non fonctionnelle (ex. mot de passe incorrect ou autre), le mode
+lazy nous permet dès l'ouverture du programme de connaître l'état de connexion de Oracle. Cela est important
+de connaître dès le début, car tout le déroulement du jeu est influencé par l'état de connexion (ex. si 
+on n'est pas connecté à Oracle, il n'y aura pas de requête pour loader le nom des maps, ni pour loader la map choisie,
+et le menu de connexion ne sera pas présent, etc. De plus, à la fin de la partie, il ne faudra pas afficher les 
+changements d'expériences des joueurs).
+
+-------------------------------------------
+Mode eager pour le chargement des données:
+-------------------------------------------
+
+Il est possible de loader tous les données du jeu à l'ouverture du jeu,
+mais il y aurait la majorité des données loadées qui ne seront pas
+utilisées. Par exemple, à l'ouverture du jeu, la première page que
+les deux joueurs vont voir c'est la page de choix de map. Une requête
+du nom de toutes les maps de la BD serait faite, pour que l'usager puisse
+choisir une map. À cette étape, on load seulement le nom des maps, et non
+les autres informations (position des joueurs, position des tuiles, des arbres,
+etc., car ça serait inefficace. Ces données seront loadées seulement lorsque les deux joueurs
+rentrent dans la partie (pour éviter le problème possible que la map soit loadé mais que
+les joueurs décident de ne plus jouer). D'où l'intérêt du mode eager.
+
+Un autre exemple le loadage des données des deux joueurs. Ces données sont
+loadées une seule fois lorsqu'un joueur se connecte. Il serait inefficace
+de loader tous les joueurs de la base de données à l'ouverture du jeu! (pour le mode lazy).
+Donc dans ce cas encore le mode eager est justifié.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

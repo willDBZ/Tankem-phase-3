@@ -1,0 +1,30 @@
+convertion float en number:
+
+Dans Table Partie_Joueur
+exemple avec le chiffre 123,76
+le champ distance:
+number () = 123,76
+number(3) = 124
+number(6,2) = 123,76
+number(6,1) = 123,8
+
+si plus petit que 0
+
+0.01234
+
+number(4,5) = 0.01234
+.00014 number(4,5) = .00014
+.000127 number(4,5) = 0.00013
+
+
+SINON utiliser la propriete CAST
+
+
+Question au prof?
+
+Binary_double?
+Binary_float?
+
+
+liens
+http://www.dba-oracle.com/t_convert_number_to_floating_point.htm
